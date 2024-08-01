@@ -5,13 +5,13 @@ const pads = [
   {
     name:'boom',
     sound: require("./assets/sounds/213BPMMetronome.mp3").default,
-    keyCode: "213 BPM Metronome",
+    keyCode: "Marshmallows",
     color:"#61dafb"
   },
   {
     name:'clap',
     sound: require("./assets/sounds/1721887657962Converted.mp3").default,
-    keyCode: "1721887657962Converted",
+    keyCode: "Opening End",
     color:"#3cff8a"
   },
   {
@@ -23,25 +23,25 @@ const pads = [
   {
     name: "kick",
     sound: require("./assets/sounds/1721887701257Converted.mp3").default,
-    keyCode: "1721887701257Converted",
+    keyCode: "Dialpad / Keypad",
     color:"#dadada"
   },
   {
     name: "openhat",
     sound: require("./assets/sounds/1721887953418Converted.mp3").default,
-    keyCode: "1721887953418Converted",
+    keyCode: "Opening",
     color: "#f3fa47"
   },
   {
     name: "ride",
     sound: require("./assets/sounds/1721887964817Converted.mp3").default,
-    keyCode: "1721887964817Converted",
+    keyCode: "Wind tunnel",
     color: "#ff6d37"
   },
   {
     name: "snare",
     sound: require("./assets/sounds/fryingpan.mp3").default,
-    keyCode: "fryingpan",
+    keyCode: "headbang",
     color: "#ff6d37"
   },
   {

@@ -3,32 +3,44 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 type SoundTypes = {
     keyCode: string,
     name: string,
-    sound: any,
+    sound: string,
     color: string
 }
 
 const Pad: React.FC<SoundTypes> = ({ keyCode, sound, color }: SoundTypes) => {
     const [playing, setPlaying] = useState(false);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const audioRefs = useRef<HTMLAudioElement[]>([]);
 
     const onPlay = useCallback(() => {
-        if (audioRef.current) {
-            audioRef.current.play();
-        }
-    }, []);
+        const audio = new Audio(sound);
+        audioRefs.current.push(audio);
+        audio.play();
+        setPlaying(true);
+
+        audio.addEventListener('ended', () => {
+            const index = audioRefs.current.indexOf(audio);
+            if (index > -1) {
+                audioRefs.current.splice(index, 1);
+            }
+            if (audioRefs.current.length === 0) {
+                setPlaying(false);
+            }
+        });
+    }, [sound]);
 
     const onPause = useCallback(() => {
-        if (audioRef.current) {
-            audioRef.current.pause();
-        }
+        audioRefs.current.forEach((audio) => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+        audioRefs.current = [];
+        setPlaying(false);
     }, []);
 
     const onReplay = useCallback(() => {
-        if (audioRef.current) {
-            audioRef.current.currentTime = 0;
-            audioRef.current.play();
-        }
-    }, []);
+        onPause();
+        onPlay();
+    }, [onPause, onPlay]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -44,28 +56,6 @@ const Pad: React.FC<SoundTypes> = ({ keyCode, sound, color }: SoundTypes) => {
         };
     }, [keyCode, onPlay]);
 
-    useEffect(() => {
-        const audio = audioRef.current;
-
-        const handlePlay = () => setPlaying(true);
-        const handlePause = () => setPlaying(false);
-        const handleEnded = () => setPlaying(false);
-
-        if (audio) {
-            audio.addEventListener('play', handlePlay);
-            audio.addEventListener('pause', handlePause);
-            audio.addEventListener('ended', handleEnded);
-        }
-
-        return () => {
-            if (audio) {
-                audio.removeEventListener('play', handlePlay);
-                audio.removeEventListener('pause', handlePause);
-                audio.removeEventListener('ended', handleEnded);
-            }
-        };
-    }, []);
-
     return (
         <div
             style={{
@@ -80,10 +70,9 @@ const Pad: React.FC<SoundTypes> = ({ keyCode, sound, color }: SoundTypes) => {
         >
             <h2>{keyCode}</h2>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '10px' }}>
-                <button style={buttonStyle} onClick={(e) => { e.stopPropagation(); onPause(); }}>Pause</button>
-                <button style={buttonStyle} onClick={(e) => { e.stopPropagation(); onReplay(); }}>Replay</button>
+                <button style={buttonStyle} onClick={(e) => { e.stopPropagation(); onPause(); }}>Stop</button>
+                <button style={buttonStyle} onClick={(e) => { e.stopPropagation(); onReplay(); }}>Start</button>
             </div>
-            <audio ref={audioRef} src={sound} />
         </div>
     );
 }

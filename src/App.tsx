@@ -3,63 +3,63 @@ import Pad from "./components/Pad";
 
 const pads = [
   {
-    name:'boom',
-    sound: require("./assets/sounds/213BPMMetronome.mp3").default,
-    keyCode: "Marshmallows",
+    name:'Dialpad',
+    sound: require("./assets/sounds/dialpad.mp3").default,
+    keyCode: "Dialpad",
     color:"#61dafb"
   },
   {
-    name:'clap',
-    sound: require("./assets/sounds/1721887657962Converted.mp3").default,
-    keyCode: "Opening End",
+    name:'Gong',
+    sound: require("./assets/sounds/Gong.wav").default,
+    keyCode: "Gong",
     color:"#3cff8a"
   },
   {
-    name: "hihat",
-    sound: require("./assets/sounds/1721887691779Converted.mp3").default,
-    keyCode: "1721887691779Converted",
+    name: "Keyturn",
+    sound: require("./assets/sounds/keyturn.wav").default,
+    keyCode: "Keyturn",
     color:"#ff1f41"
   },
   {
-    name: "kick",
-    sound: require("./assets/sounds/1721887701257Converted.mp3").default,
-    keyCode: "Dialpad / Keypad",
+    name: "Marshmallow Walk",
+    sound: require("./assets/sounds/marshmallow.wav").default,
+    keyCode: "Marshmallow Walk", 
     color:"#dadada"
   },
   {
-    name: "openhat",
-    sound: require("./assets/sounds/1721887953418Converted.mp3").default,
-    keyCode: "Opening",
+    name: "Meow",
+    sound: require("./assets/sounds/meow.wav").default,
+    keyCode: "Meow",
     color: "#f3fa47"
   },
   {
-    name: "ride",
-    sound: require("./assets/sounds/1721887964817Converted.mp3").default,
-    keyCode: "Wind tunnel",
-    color: "#ff6d37"
-  },
-  {
-    name: "snare",
-    sound: require("./assets/sounds/fryingpan.mp3").default,
-    keyCode: "headbang",
-    color: "#ff6d37"
-  },
-  {
-    name: "tink",
+    name: "Metal Door Opening",
     sound: require("./assets/sounds/metaldooropening.mp3").default,
-    keyCode: "metaldooropening",
+    keyCode: "Metal Door Opening",
     color: "#ff6d37"
   },
   {
-    name: "tom",
-    sound: require("./assets/sounds/metalpipe.mp3").default,
-    keyCode: "Metal Pipe",
+    name: "Pan",
+    sound: require("./assets/sounds/pan.wav").default,
+    keyCode: "Pan",
     color: "#ff6d37"
   },
   {
-    name: "clap",
-    sound: require("./assets/sounds/metalhitmemesound.mp3").default,
-    keyCode: "metalhitmemesound",
+    name: "Mud Footsteps",
+    sound: require("./assets/sounds/squishyfootsteps.wav").default,
+    keyCode: "Mud Footsteps",
+    color: "#ff6d37"
+  },
+  {
+    name: "Wind Tunnel",
+    sound: require("./assets/sounds/windtunnel.mp3").default,
+    keyCode: "Wind Tunnel",
+    color: "#ff6d37"
+  },
+  {
+    name: "Whoosh",
+    sound: require("./assets/sounds/woosh.wav").default,
+    keyCode: "Whoosh",
     color: "#ff6d37"
   }
 ]

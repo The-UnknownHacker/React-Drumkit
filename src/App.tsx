@@ -3,34 +3,16 @@ import Pad from "./components/Pad";
 
 const pads = [
   {
-    name:'Dialpad',
-    sound: require("./assets/sounds/dialpad.mp3").default,
-    keyCode: "Dialpad",
-    color:"#61dafb"
-  },
-  {
-    name:'Gong',
-    sound: require("./assets/sounds/Gong.wav").default,
-    keyCode: "Gong",
-    color:"#3cff8a"
-  },
-  {
     name: "Keyturn",
     sound: require("./assets/sounds/keyturn.wav").default,
     keyCode: "Keyturn",
     color:"#ff1f41"
   },
   {
-    name: "Marshmallow Walk",
-    sound: require("./assets/sounds/marshmallow.wav").default,
-    keyCode: "Marshmallow Walk", 
-    color:"#dadada"
-  },
-  {
-    name: "Meow",
-    sound: require("./assets/sounds/meow.wav").default,
-    keyCode: "Meow",
-    color: "#f3fa47"
+    name:'Dialpad',
+    sound: require("./assets/sounds/dialpad.mp3").default,
+    keyCode: "Dialpad",
+    color:"#61dafb"
   },
   {
     name: "Metal Door Opening",
@@ -43,6 +25,12 @@ const pads = [
     sound: require("./assets/sounds/pan.wav").default,
     keyCode: "Pan",
     color: "#ff6d37"
+  },
+  {
+    name: "Marshmallow Walk",
+    sound: require("./assets/sounds/marshmallow.wav").default,
+    keyCode: "Marshmallow Walk", 
+    color:"#dadada"
   },
   {
     name: "Mud Footsteps",
@@ -61,6 +49,18 @@ const pads = [
     sound: require("./assets/sounds/woosh.wav").default,
     keyCode: "Whoosh",
     color: "#ff6d37"
+  },
+  {
+    name:'Gong',
+    sound: require("./assets/sounds/Gong.wav").default,
+    keyCode: "Gong",
+    color:"#3cff8a"
+  },
+  {
+    name: "Meow",
+    sound: require("./assets/sounds/meow.wav").default,
+    keyCode: "Meow",
+    color: "#f3fa47"
   }
 ]
 

@@ -61,6 +61,18 @@ const pads = [
     sound: require("./assets/sounds/meow.wav").default,
     keyCode: "Meow",
     color: "#f3fa47"
+  },
+  {
+    name: "Fizz",
+    sound: require("./assets/sounds/fizz.wav").default,
+    keyCode: "Fizz",
+    color: "#76c7c0"
+  },
+  {
+    name: "Pop",
+    sound: require("./assets/sounds/pop.wav").default,
+    keyCode: "Pop",
+    color: "#ff6d37"
   }
 ]
 

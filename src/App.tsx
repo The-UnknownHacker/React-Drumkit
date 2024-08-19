@@ -79,6 +79,30 @@ const pads = [
     sound: require("./assets/sounds/siren.wav").default,
     keyCode: "Siren",
     color: "#ff6d37"
+  },
+  {
+    name: "Explosion",
+    sound: require("./assets/sounds/explosion.wav").default,
+    keyCode: "Explosion",
+    color: "#ff6d37"
+  },
+  {
+    name: "Boat Horn",
+    sound: require("./assets/sounds/boat.wav").default,
+    keyCode: "Boat Horn",
+    color: "#ff6d37"
+  },
+  {
+    name: "Woop",
+    sound: require("./assets/sounds/woop.wav").default,
+    keyCode: "Woop",
+    color: "#ff6d37"
+  },
+  {
+    name: "Teleport",
+    sound: require("./assets/sounds/teleport.wav").default,
+    keyCode: "Teleport",
+    color: "#ff6d37"
   }
 ]
 

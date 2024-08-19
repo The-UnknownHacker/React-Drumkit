@@ -73,6 +73,12 @@ const pads = [
     sound: require("./assets/sounds/pop.wav").default,
     keyCode: "Pop",
     color: "#ff6d37"
+  },
+  {
+    name: "Siren",
+    sound: require("./assets/sounds/siren.wav").default,
+    keyCode: "Siren",
+    color: "#ff6d37"
   }
 ]
 

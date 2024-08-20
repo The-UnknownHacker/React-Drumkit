@@ -109,6 +109,12 @@ const pads = [
     sound: require("./assets/sounds/static.wav").default,
     keyCode: "Static",
     color: "#ff6d37"
+  },
+  {
+    name: "Landing",
+    sound: require("./assets/sounds/landing.wav").default,
+    keyCode: "Landing",
+    color: "#ff6d37"
   }
 ]
 

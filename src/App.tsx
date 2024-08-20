@@ -103,6 +103,12 @@ const pads = [
     sound: require("./assets/sounds/teleport.wav").default,
     keyCode: "Teleport",
     color: "#ff6d37"
+  },
+  {
+    name: "Static",
+    sound: require("./assets/sounds/static.wav").default,
+    keyCode: "Static",
+    color: "#ff6d37"
   }
 ]
 

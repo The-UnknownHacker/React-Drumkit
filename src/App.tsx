@@ -115,6 +115,12 @@ const pads = [
     sound: require("./assets/sounds/landing.wav").default,
     keyCode: "Landing",
     color: "#ff6d37"
+  },
+  {
+    name: "Burp",
+    sound: require("./assets/sounds/burp.wav").default,
+    keyCode: "Le Burp",
+    color: "#ff6d37"
   }
 ]
 
